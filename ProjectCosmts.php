@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
    if ($conn->query($sql) === TRUE) {
     echo "<script>
-        alert('✅ Payment Successful!');
+        alert('✅ Submitted Successful!');
         window.location.href = 'Project1.html';
     </script>";
     exit();
