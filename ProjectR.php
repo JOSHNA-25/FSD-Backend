@@ -5,13 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password= $_POST['password'];
-    $confirmpassword= $_POST['confirmpassword'];
 
     // Step 2: Connect to MySQL
     $servername = "localhost";
     $username = "root";
     $db_password = "";  // Default for XAMPP
-    $dbname = "login";
+    $dbname = "ecommerce";
 
     $conn = new mysqli($servername, $username, $db_password, $dbname);
 
@@ -21,11 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Step 4: Insert the login data
-    $sql = "INSERT INTO  register ( name, email, password, confirmpassword) VALUES ('$name', '$email', '$password', '$password')";
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    $hashed_email = password_hash($email, PASSWORD_DEFAULT);
-
-
+    $sql = "INSERT INTO  register ( name, email, password) VALUES ('$name', '$email', '$password')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Welcome!');</script>";
@@ -37,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +79,7 @@ td{
 .main2{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
 }
 .main2 img{
     top: 0px;
@@ -304,7 +298,6 @@ font-size: small;
 }
 
 
-
 #h12{
     position: absolute;
     top: 1050px;
@@ -315,6 +308,7 @@ font-size: small;
 .t3{
     display: flex;
     flex-direction: row;
+    top: 3400px;
 }
 .a2{
 position: absolute;
@@ -402,11 +396,207 @@ font-size: small;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
+#h33 {
+    position: absolute;
+    top: 1550px; 
+    left: 660px;
+    font-size: xx-large;
+    font-style: oblique;
+}
+.t6 {
+    display: flex;
+    flex-direction: row;
+    top: 3700px;
+}
+.aaa3 {
+    position: absolute;
+    top: 1650px;
+    left: 2%;
+    font-size: small;
+}
+.aaaa3 {
+    position: absolute;
+    top: 250px;
+    left: -235%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.bbb3 {
+    position: absolute;
+    top: 1650px;
+    left: 22%;
+    font-size: small;
+}
+.bbbb3 {
+    position: absolute;
+    top: 250px;
+    left: -233%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.ccc3 {
+    position: absolute;
+    top: 1650px;
+    left: 42%;
+    font-size: small;
+}
+.cccc3 {
+    position: absolute;
+    top: 250px;
+    left: -231%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.ddd3 {
+    position: absolute;
+    top: 1650px;
+    left: 62%;
+    font-size: small;
+}
+.dddd3 {
+    position: absolute;
+    top: 250px;
+    left: -229%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.eee3 {
+    position: absolute;
+    top: 1650px;
+    left: 82%;
+    font-size: small;
+}
+.eeee3 {
+    position: absolute;
+    top: 250px;
+    left: -227%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#h44 {
+    position: absolute;
+    top: 2050px; 
+    left: 670px;
+    font-size: xx-large;
+    font-style: oblique;
+}
+.t7 {
+    display: flex;
+    flex-direction: row;
+    top: 5400px;
+}
+.aa33 {
+    position: absolute;
+    top: 2150px;
+    left: 2%;
+    font-size: small;
+}
+.aaa33 {
+    position: absolute;
+    top: 250px;
+    left: -235%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.bb33 {
+    position: absolute;
+    top: 2150px;
+    left: 22%;
+    font-size: small;
+}
+.bbb33 {
+    position: absolute;
+    top: 250px;
+    left: -233%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.cc33 {
+    position: absolute;
+    top: 2150px;
+    left: 42%;
+    font-size: small;
+}
+.ccc33 {
+    position: absolute;
+    top: 250px;
+    left: -231%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.dd33 {
+    position: absolute;
+    top: 2150px;
+    left: 62%;
+    font-size: small;
+}
+.ddd33 {
+    position: absolute;
+    top: 250px;
+    left: -229%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.ee33 {
+    position: absolute;
+    top: 2150px;
+    left: 82%;
+    font-size: small;
+}
+.eee33 {
+    position: absolute;
+    top: 250px;
+    left: -227%;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
 
 #h13{
     position: absolute;
-    top: 1550px;
-    left: 160px;
+    top: 2600px;
+    left: 175px;
     font-size:xx-large;
     font-style: oblique;   
 }
@@ -417,7 +607,7 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 8%;
-    top: 1650px;
+    top: 2700px;
 }
 .cd{
     position: absolute;
@@ -426,17 +616,17 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 8%;
-    top: 1800px;
+    top: 2850px;
 }
 #p1{
     position: absolute;
-    top: 1990px;
+    top: 3030px;
     left: 170px;
     font-size:x-large;
 }
 .b1b{
     position: absolute;
-    top: 1980px;
+    top: 3100px;
     left: 190px;
     font-size:large;
     background-color: aquamarine;
@@ -445,8 +635,8 @@ font-size: small;
 
 #h14{
     position: absolute;
-    top: 1550px;
-    left: 660px;
+    top: 2600px;
+    left: 655px;
     font-size:xx-large;
     font-style: oblique;   
 }
@@ -457,7 +647,7 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 40%;
-    top: 1650px;
+    top: 2700px;
 }
 .cd1{
     position: absolute;
@@ -466,17 +656,17 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 40%;
-    top: 1800px;
+    top: 2850px;
 }
 #p2{
     position: absolute;
-    top: 1990px;
+    top: 3030px;
     left: 670px;
     font-size:x-large;
 }
 .b2b {
     position: absolute;
-    top: 1980px;
+    top: 3100px;
     left: 690px;
     font-size:large;
     background-color: aquamarine;
@@ -485,7 +675,7 @@ font-size: small;
 
 #h15{
     position: absolute;
-    top: 1550px;
+    top: 2600px;
     left: 1150px;
     font-size:xx-large;
     font-style: oblique;   
@@ -497,7 +687,7 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 72%;
-    top: 1650px;
+    top: 2700px;
 }
 .cd2{
     position: absolute;
@@ -506,17 +696,17 @@ font-size: small;
     flex-wrap: wrap;
     margin: 0px;
     left: 72%;
-    top: 1800px;
+    top: 2850px;
 }
 #p3{
     position: absolute;
-    top: 1990px;
+    top: 3030px;
     left: 1170px;
     font-size:x-large;
 }
 .b3b{
     position: absolute;
-    top: 1980px;
+    top: 3100px;
     left: 1190px;
     font-size:large;
     background-color: aquamarine;
@@ -524,7 +714,7 @@ font-size: small;
 
 
 .mark{
-    top: 2050px;
+    top: 3160px;
     position: absolute;
     color: rgb(250, 4, 4);
     font-size: x-large;
@@ -546,7 +736,7 @@ a{
 .main3{
     position: relative;
     background-color: rgba(12, 2, 2, 0.927);
-    top: 1250px;
+    top: 2000px;
     width: 100vw;
     height: 40Vh;
 }
@@ -668,7 +858,7 @@ footer{
     background-color: darkgoldenrod;
     color: azure;
     font-size: 30px;
-    top: 327%;
+    top: 3450px;
     width: 99%;
     height: 7Vh;
     left: 0px;
@@ -694,7 +884,7 @@ footer{
     </div>
 
     <div class="main2">
-        <img src="https://img.freepik.com/premium-photo/clothes-hanging-rack-pastel-beige-white-colors-3d-rendering-studio-store_576429-1530.jpg?w=740" alt="">
+        <img src="https://template.canva.com/EAFCJwAA-pQ/1/0/1600w-HDiSU9e_67s.jpg" alt="">
     </div>
 
     <h1 id="h1">KURTIS</h1>
@@ -702,9 +892,9 @@ footer{
         <tr>
             <td>
                 <div class="a">
-                    <img src="https://th.bing.com/th/id/OIP.Sl-1ZVnwq0HcFgjz4bpRpgHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                    <img src="https://i.etsystatic.com/18280828/r/il/e862de/2879009882/il_1140xN.2879009882_o9l8.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                         <div class="aa">
-                            <a href="payment1.html" onclick="showForm()">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()">BUY</a>
                         </div>
                     <h2>Price: Rs.500</h2>
                 </div>
@@ -712,9 +902,9 @@ footer{
             
                 <td>
                 <div class="b">
-                    <img src="https://th.bing.com/th/id/OIP.nlgkcItaU-QcNYP61ZLJ9AHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                    <img src="https://www.aishwaryadesignstudio.com/content/images/thumbs/0098869_partywear-designer-foil-print-pink-kurti.jpeg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="bb">
-                            <a href="payment1.html" onclick="showForm()">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()">BUY</a>
                         </div>
                     <h2>Price: Rs.800</h2>
                 </div>
@@ -723,25 +913,25 @@ footer{
                 <div class="c">
                     <img src="https://th.bing.com/th/id/OIP.oaLfI2hAmIu_XAr57x5vwAHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                      <div class="cc">
-                            <a href="payment1.html" onclick="showForm()">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()">BUY</a>
                         </div>
                     <h2>Price: Rs.600</h2>
                 </div>
             </td>
             <td>
                 <div class="d">
-                    <img src="https://i.etsystatic.com/18280828/r/il/e862de/2879009882/il_1140xN.2879009882_o9l8.jpg" alt=""style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                    <img src="https://i.pinimg.com/originals/20/03/53/2003539dce547b377db63484cc257cf0.jpg" alt=""style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="dd">
-                            <a href="payment1.html" onclick="showForm()">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()">BUY</a>
                         </div>
                     <h2>Price: Rs.1600</h2>
                 </div>
             </td>
             <td>
                 <div class="e">
-                    <img src="https://www.parivarceremony.com/media/catalog/product/cache/62408a38a401bb86dbe3ed2f017b539f/p/r/prc2387.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                    <img src="https://cdn.rajwadi.com/image/cache/data/charming-multi-colour-designer-gown-43855-800x1100.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="ee">
-                            <a href="payment1.html" onclick="showForm()">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()">BUY</a>
                         </div>
                     <h2>Price: Rs.1500</h2>
                 </div>
@@ -757,7 +947,7 @@ footer{
                 <div class="a1">
                     <img src="https://th.bing.com/th/id/OIP.gtn169HKXaOu9hoKB17MmQHaJ4?rs=1&pid=ImgDetMain" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                      <div class="aa1">
-                            <a href="payment1.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.2500</h2>
                 </div>
@@ -766,7 +956,7 @@ footer{
                 <div class="b1">
                     <img src="https://cdn.sareeka.com/image/data2020/embroidered-silk-saree-141031.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="bb1">
-                            <a href="payment1.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.2200</h2>
                 </div>
@@ -775,7 +965,7 @@ footer{
                 <div class="c1">
                     <img src="https://image.wedmegood.com/resized-nw/1300X/wp-content/uploads/2019/07/1568396426_A_R_Wed32.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="cc1">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: violet; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: violet; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.3000</h2>
                 </div>
@@ -784,7 +974,7 @@ footer{
                 <div class="d1">
                     <img src="https://th.bing.com/th/id/R.561c38b08effd1dd858e280fe96d8a8d?rik=KZz3UdLtSyDXnQ&riu=http%3a%2f%2ftamarindweddings.com%2fblog%2fwp-content%2fuploads%2f2016%2f02%2f5-112.jpg&ehk=VZRryA1DEqH3%2fX8DJdubv2VXcs739gxrMaWsWjoJ6Nw%3d&risl=&pid=ImgRaw&r=0" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="dd1">
-                            <a href="payment1.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()" style="background-color: violet; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.1000</h2>
                 </div>
@@ -793,7 +983,7 @@ footer{
                 <div class="e1">
                     <img src="https://stylesatlife.com/wp-content/uploads/2019/05/Rakul-Preet-Singh-in-a-Kanchipuram-Saree.jpg" alt="" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="ee1">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: violet; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: violet; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.3500</h2>
                 </div>
@@ -809,7 +999,7 @@ footer{
                 <div class="a2">
                     <img src="https://www.omsara.co.uk/wp-content/uploads/4804.-1-1-scaled.jpeg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="aa2">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.2000 </h2>
                    </div>
@@ -818,7 +1008,7 @@ footer{
                 <div class="b2">
                     <img src="https://www.omsara.co.uk/wp-content/uploads/4705.--scaled.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
                     <div class="bb2">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.3500 </h2>
                    </div>
@@ -827,7 +1017,7 @@ footer{
                 <div class="c2">
                     <img src="https://www.omsara.co.uk/wp-content/uploads/A3F5E799-1086-4409-9A18-CCF045C9D924.jpeg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px;height: 250px;">
                     <div class="cc2">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.5000 </h2>
                    </div>
@@ -836,7 +1026,7 @@ footer{
                 <div class="d2">
                     <img src="https://akm-img-a-in.tosshub.com/sites/gloss99/resources/201912/photo_gallery/anushree-reddy-_122419042358.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px;height: 250px;">
                     <div class="dd2">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.5500 </h2>
                    </div>
@@ -845,7 +1035,7 @@ footer{
                 <div class="e2">
                     <img src="https://i.pinimg.com/originals/c6/80/d5/c680d568868d92894fc1b908a0abb46b.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px;height: 250px;">
                     <div class="ee2">
-                            <a href="payment1.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
+                            <a href="PaymentDress.html" onclick="showForm()"style="background-color: orange; color: black;">BUY</a>
                         </div>
                     <h2>Price: Rs.4000 </h2>
                    </div>
@@ -853,19 +1043,123 @@ footer{
         </tr>
        </table>
 
-       <h1 id="h13">FOOTWEARS</h1>
+       <h1 id="h33">CASUAL WEARS</h1>
+<table class="t6">
+    <tr>
+        <td>
+            <div class="aaa3">
+                <img src="https://i5.walmartimages.com/seo/RYDCOT-Business-Casual-Tops-Women-Long-Sleeve-Solid-Color-Button-Down-Shirt-Turndown-Collar-office-Work-Elegant-Ladies-Blouses-Clearance_eb4705d3-d381-4e19-9e33-72a4dfafdddb.423e8fe75cb766b7e311c30e7aa3ebff.jpeg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="aaaa3">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(131, 232, 224); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.700 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="bbb3">
+                <img src="https://i.pinimg.com/originals/c6/43/1f/c6431fbd460e4339142bb8e83f5fd278.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="bbbb3">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(131, 232, 224); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.500 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="ccc3">
+                <img src="https://i.pinimg.com/originals/a4/00/4a/a4004a52d5350ec3e510bc286b501862.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="cccc3">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(131, 232, 224); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.750 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="ddd3">
+                <img src="https://rukminim2.flixcart.com/image/828/855/xif0q/top/s/l/y/xl-colds1-neoen-original-imagxvtv7twqbktc.jpeg?q=60" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="dddd3">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(131, 232, 224); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.600 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="eee3">
+                <img src="https://www.cinchjeans.com/store/pc/catalog/msw9164033_252_detail.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="eeee3">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(131, 232, 224); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.780 </h2>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<h1 id="h44">PARTY WEARS</h1>
+<table class="t7">
+    <tr>
+        <td>
+            <div class="aa33">
+                <img src="https://www.rajwadi.com/image/cache/data/pink-party-designer-gown-40858-800x1100.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="aaa33">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(147, 237, 140); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.1800 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="bb33">
+                <img src="https://i.pinimg.com/originals/de/b9/d5/deb9d550519445b0ac7ee24e109a6510.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="bbb33">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(147, 237, 140); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.3500 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="cc33">
+                <img src="https://i.pinimg.com/originals/a4/e8/2b/a4e82bfa18f55c85a062fec1c00753b3.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="ccc33">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(147, 237, 140); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.2500 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="dd33">
+                <img src="https://i.pinimg.com/originals/3e/51/4a/3e514ae7fb8aae9b0f5d5b025e829564.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="ddd33">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(147, 237, 140); color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.1500 </h2>
+            </div>
+        </td>
+        <td>
+            <div class="ee33">
+                <img src="https://i.pinimg.com/736x/37/18/a5/3718a5c681f85ab244bf1d6ae630947e.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 250px; height: 250px;">
+                <div class="eee33">
+                    <a href="PaymentDress.html" onclick="showForm()" style="background-color: rgb(147, 237, 140)    ; color: black;">BUY</a>
+                </div>
+                <h2>Price: Rs.2800 </h2>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+    <h1 id="h13">FOOTWEARS</h1>
        <div class="ab">
         <div class="a3">
-            <img src="https://i.pinimg.com/originals/87/5c/6e/875c6ecfe9638c55311ce6aba124b85e.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px; height:150px;">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.f1h_gXn-wzmCRCRfh38YiQHaFJ?pid=Api&P=0&h=180" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px; height:150px;">
            </div>
            <div class="b3">
             <img src="https://images-na.ssl-images-amazon.com/images/I/71l46PtMqcL.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px; height: 150px;">
            </div>
        </div>
-
+       
        <div class="cd">
         <div class="c3">
-            <img src="https://i5.walmartimages.com/asr/f65fae5b-793a-484c-acaa-d8c1a497c7b2_1.f7b585611417fa96745732f4018cd50f.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.WhfjpAPiXVZ65FVeA01MxQHaIY?pid=Api&P=0&h=180" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
            </div>
            <div class="d3">
             <img src="https://i.pinimg.com/originals/a2/78/b6/a278b639d764a830c2c060e5af5cfbcd.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
@@ -887,10 +1181,10 @@ footer{
 
        <div class="cd1">
         <div class="c4">
-            <img src="https://th.bing.com/th/id/R.fdaa34208157cd895fa510d26b962a62?rik=KvXmcL77E%2bsMdg&riu=http%3a%2f%2fsauvarnajewelry.files.wordpress.com%2f2012%2f04%2fdiamond-choker-set-zoom.jpg&ehk=qIn3MaRHj3uH6meg99RIW5HW5KqNvWoCuq3ABTxIgag%3d&risl=&pid=ImgRaw&r=0" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.STUF3nEf4i4tvmvLK7lpxgHaHa?pid=Api&P=0&h=180" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
            </div>
            <div class="d4">
-            <img src="https://www.southjewellery.com/wp-content/uploads/2020/04/diamond-emerald-bangles-scaled-e1585932575233.jpg" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
+            <img src="https://tse1.mm.bing.net/th/id/OIF.y0PagN4DQOUpwB8WACxclw?pid=Api&P=0&h=180" alt="no image" style="border: 7px solid rgb(27, 5, 39); width: 150px;height: 150px;">
            </div> 
        </div>
        <p id="p2">Starting @ Rs.1500</p>
@@ -928,16 +1222,16 @@ footer{
         <h3 class="h3">REACH US</h3>
        <table class="t4">
         <tr>
-            <td>📍No:6, 4th Street, Anna Salai</td>
+            <td>📍No:xyz, 4th Street, Anna Salai</td>
         </tr>
         <tr>
-            <td>OMR,Chennai-600057, TamilNadu, India.</td> 
+            <td>OMR,Chennai-6000XX, TamilNadu, India.</td> 
         </tr>
         <tr>
-            <td>📞+919940075895</td>
+            <td>📞+919940xxxxxx</td>
         </tr>
         <tr>
-            <td>📧joshnajivi2515@gmail.com</td>
+            <td>📧josh785@gmail.com</td>
         </tr>
            
     </table>
