@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $servername = "localhost";
     $username = "root";
     $db_password = "";
-    $dbname = "login";
+    $dbname = "ecommerce";
 
     $conn = new mysqli($servername, $username, $db_password, $dbname);
 
@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO footwear (product, size, name, address, phone, pincode, paymentmode)
+    $sql = "INSERT INTO boots_4 (product, size, name, address, phone, pincode, paymentmode)
             VALUES ('$product','$size', '$name', '$address', '$phone', '$pincode', '$paymentmode')";
 
    if ($conn->query($sql) === TRUE) {
     echo "<script>
-        alert('✅ Submitted Successful!');
+        alert('Thank you for Shopping!');
         window.location.href = 'Project1.html';
     </script>";
     exit();
