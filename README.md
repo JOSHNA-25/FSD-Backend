@@ -31,7 +31,6 @@ Records the exact time a payment was submitted using submitted_at.
 **LOGIN**
 PHP![Screenshot 2025-07-09 121944](https://github.com/user-attachments/assets/68a80069-1440-40a1-9c78-e81becf35ba3)
 **REGISTER**
-![Screenshot 2025-07-09 122149](https://github.com/user-attachments/assets/ee7ff853-09ab-49c4-bd3c-9bbc8efb122f)
-**PAYMENT**
 ![Screenshot 2025-07-09 122042](https://github.com/user-attachments/assets/b861cb35-be0f-4f9e-be37-55c3eb991eb2)
-
+**PAYMENT**
+![Screenshot 2025-07-09 122149](https://github.com/user-attachments/assets/ee7ff853-09ab-49c4-bd3c-9bbc8efb122f)
